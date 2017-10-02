@@ -26,14 +26,26 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <title>Goodbye Cruel Worlddsfzgdfhzxdhgfhj</title> <!-- not actually displayed as this is the title of the tab, apps don't see this -->
+        <title>Goodbye Cruel Worlddsfzgdfhzxdhgfhj</title> <!-- not actually displayed as this is the title of the tab (web tab), apps don't see this -->
+        <!-- the code below downloads jQuery library from google and then we can give script commands in the form of $(target).actionused(might
+        need another function) $ = defines/access jQuery, these are placed inside the head -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){   //inside document after it is ready, call function
+                $("p").click(function(){    //inside <p> </p> upon click do function
+                    $(this).hide();         //inside the current (text inside <p> in this case) call function hide, hiding it from user
+                });                         // over all, after document is ready, if you click what is inside <p>, hide it from user
+            });
+        </script>
+        
     </head>
     <body>
            <h1>PhoneGap test app, Goodbye Cruel World</h1>
         
+        <p>Click me, it was just your imagination</p>
         
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-        
+        <h2> </h2>
     </body>
 </html>
