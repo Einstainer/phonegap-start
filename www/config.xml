@@ -18,7 +18,8 @@
     
 
     <preference name="permissions"                value="none"/>
-<platform name="android" />
+    <platform name="android" />
+    <platform name="winphone" />
 
     <access origin="*"/>
     <plugin name="cordova-plugin-whitelist" version="1" />
